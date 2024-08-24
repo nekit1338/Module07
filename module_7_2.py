@@ -1,13 +1,19 @@
 def custom_write(file_name, strings):
     strings_positions = {}
     with open(file_name, "w", encoding="utf-8") as file:
-        number_of_string = 1
+        index = 1
         for i in strings:
             position = file.tell()
             file.write(i + "\n")
             strings_positions[(index, position)] = i
-            number_of_string += 1
+            index += 1
     return strings_positions
+
+
+def printer(filename):
+    with open(filename, 'r', encoding="utf-8") as file:
+        for line in file:
+            print(line, end='')
 
 
 if __name__ == "__main__":
@@ -23,3 +29,4 @@ if __name__ == "__main__":
         print(elem)
 
     print(result)
+    printer("test.txt")
