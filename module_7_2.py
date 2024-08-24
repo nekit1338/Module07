@@ -1,12 +1,12 @@
 def custom_write(file_name, strings):
     strings_positions = {}
     with open(file_name, "w", encoding="utf-8") as file:
-        index = 1
+        number_of_string = 1
         for i in strings:
             position = file.tell()
             file.write(i + "\n")
             strings_positions[(index, position)] = i
-            index += 1
+            number_of_string += 1
     return strings_positions
 
 
