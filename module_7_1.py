@@ -32,6 +32,7 @@ class Shop:
                 file.write(str(product) + '\n')
             else:
                 print(f'Продукт {product.name} уже есть в магазине')
+        file.close()
 
 
 if __name__ == '__main__':
