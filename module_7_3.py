@@ -11,10 +11,6 @@ class WordsFinder:
         for filename in self.file_names:
             with open(filename, "r", encoding="utf-8") as file:
                 text = file.read()
-                #  [i.lower() for i in text if isinstance(i, str)]
-                #    for i in text:
-                #        if isinstance(i, str):
-                #            i.lower()
                 words = [word for word in text.lower().split()]
                 for i in punct:
                     for j in range(len(words)):
